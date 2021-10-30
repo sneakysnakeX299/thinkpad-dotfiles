@@ -1,0 +1,5 @@
+mem=$(free -b | awk 'NR==2{print $2"-"$7}')
+usedmem=$((mem / 1024 / 1024))
+totalmem=$((${mem//-*} / 1024 / 1024))
+mem="${usedmem}MB/${totalmem}MB"
+echo $mem

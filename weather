@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+if ping -c 1 google.com > /dev/null ; then
+	curl 'wttr.in/Budapest?format=%c+%C+%t+%h+%w+%m'
+else 
+	echo ""
+fi
